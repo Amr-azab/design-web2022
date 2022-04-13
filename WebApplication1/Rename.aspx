@@ -34,7 +34,7 @@
             <tr>
                 <td class="auto-style2">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Label ID="Label1" runat="server" Font-Names="Arial" Font-Size="X-Large" ForeColor="#009900" Text="Edit data"></asp:Label>
+                    <asp:Label ID="Label1" runat="server" Font-Names="Arial" Font-Size="X-Large" ForeColor="#009900" Text="Edit Profile"></asp:Label>
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -86,6 +86,27 @@
             <tr>
                 <td class="auto-style3">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Label ID="Label6" runat="server" Font-Names="Arial" Font-Size="Large" Text="Password"></asp:Label>
+                    <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="TextBox5" runat="server" OnTextChanged="TextBox3_TextChanged" TextMode="Password"></asp:TextBox>
+                </td>
+                <td class="auto-style4">&nbsp;</td>
+                <td class="auto-style4">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Label ID="Label7" runat="server" Font-Names="Arial" Font-Size="Large" Text="Confirm Password"></asp:Label>
+                    <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="TextBox6" runat="server" OnTextChanged="TextBox3_TextChanged" TextMode="Password"></asp:TextBox>
+                </td>
+                <td class="auto-style4">&nbsp;</td>
+                <td class="auto-style4">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style3">
                     <asp:Button ID="Button2" runat="server" Font-Names="Arial" Font-Size="Large" ForeColor="#6600FF" Text="Submit" />
                 </td>
                 <td class="auto-style4">&nbsp;</td>

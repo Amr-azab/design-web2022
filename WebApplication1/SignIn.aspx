@@ -44,7 +44,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style2">&nbsp;&nbsp;
-                        <asp:HyperLink ID="HyperLink1" runat="server" Font-Names="Arial">Forget Password ?</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink1" runat="server" Font-Names="Arial" NavigateUrl="~/Forget Password.aspx">Forget Password ?</asp:HyperLink>
                         &nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>

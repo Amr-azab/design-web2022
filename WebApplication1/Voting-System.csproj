@@ -73,6 +73,7 @@
       <DependentUpon>VotingSystem.mdf</DependentUpon>
     </Content>
     <Content Include="CreateVoting.aspx" />
+    <Content Include="Forget Password.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="index.html" />
     <Content Include="links.aspx" />
@@ -96,6 +97,13 @@
     </Compile>
     <Compile Include="CreateVoting.aspx.designer.cs">
       <DependentUpon>CreateVoting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forget Password.aspx.cs">
+      <DependentUpon>Forget Password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forget Password.aspx.designer.cs">
+      <DependentUpon>Forget Password.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>

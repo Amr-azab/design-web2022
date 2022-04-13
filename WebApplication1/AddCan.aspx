@@ -11,10 +11,12 @@
         }
         .auto-style2 {
             text-align: center;
+            width: 692px;
         }
         .auto-style3 {
             text-align: center;
             height: 39px;
+            width: 692px;
         }
         .auto-style4 {
             height: 39px;
@@ -55,7 +57,9 @@
                         <br />
                         <asp:TextBox ID="TextBox3" runat="server" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
                     </td>
-                    <td>&nbsp;</td>
+                    <td>
+                        <asp:Button ID="Button2" runat="server" Font-Names="Arial" Font-Size="Large" ForeColor="#3366FF" Text="Upload" />
+                    </td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
