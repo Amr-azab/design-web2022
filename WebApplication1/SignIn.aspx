@@ -11,6 +11,10 @@
         }
         .auto-style2 {
             text-align: center;
+            width: 904px;
+        }
+        .auto-style3 {
+            width: 904px;
         }
     </style>
 </head>
@@ -19,26 +23,30 @@
         <div>
             <table class="auto-style1">
                 <tr>
-                    <td>
+                    <td class="auto-style3">
                         <asp:Label ID="Label1" runat="server" Font-Names="Arial" Font-Size="X-Large" ForeColor="#FF0066" Text="Enter Your Username and Password  to login in"></asp:Label>
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td>
+                    <td class="auto-style3">
                         <asp:Label ID="Label2" runat="server" Font-Names="Arial" Font-Size="Large" Text="Username:"></asp:Label>
 &nbsp;<asp:TextBox ID="txtUN" runat="server"></asp:TextBox>
-                    </td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtUN" ErrorMessage="This is a required field " Font-Names="Arial" Font-Size="Small" ForeColor="Red"></asp:RequiredFieldValidator>
+                        </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td>
+                    <td class="auto-style3">
                         <asp:Label ID="Label3" runat="server" Font-Names="Arial" Font-Size="Large" Text="Password:"></asp:Label>
 &nbsp;
                         <asp:TextBox ID="txtPW" runat="server" OnTextChanged="TextBox2_TextChanged"></asp:TextBox>
-                    </td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtPW" ErrorMessage="This is a required field " Font-Names="Arial" Font-Size="Small" ForeColor="Red"></asp:RequiredFieldValidator>
+                        </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
@@ -50,19 +58,19 @@
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td>
+                    <td class="auto-style3">
                         <asp:Button ID="Button1" runat="server" Font-Names="Arial" Font-Size="Large" Text="Log In" />
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td>&nbsp;</td>
+                    <td class="auto-style3">&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td>&nbsp;</td>
+                    <td class="auto-style3">&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>

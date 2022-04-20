@@ -23,5 +23,10 @@ namespace Voting_System
         {
 
         }
+
+        protected void TextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

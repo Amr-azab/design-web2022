@@ -8,69 +8,97 @@
     <style type="text/css">
         .auto-style1 {
             width: 100%;
+            height: 505px;
         }
         .auto-style2 {
             text-align: center;
-            width: 692px;
+            width: 297px;
         }
         .auto-style3 {
             text-align: center;
             height: 39px;
-            width: 692px;
+            width: 297px;
         }
         .auto-style4 {
             height: 39px;
+        }
+        .auto-style6 {
+            height: 39px;
+            width: 568px;
+            text-align: center;
+        }
+        .auto-style7 {
+            width: 568px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
+        </div>
             <table class="auto-style1">
                 <tr>
                     <td class="auto-style2">
-                        <asp:Label ID="Label1" runat="server" Font-Names="Arial" Font-Size="X-Large" ForeColor="#99FF66" Text="Add Candidate"></asp:Label>
+                        &nbsp;</td>
+                    <td class="auto-style7">
+                        <asp:Label ID="Label1" runat="server" Font-Names="Arial" Font-Size="XX-Large" ForeColor="#99FF66" Text="Add Candidate"></asp:Label>
                     </td>
-                    <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style3">&nbsp;<asp:Label ID="Label2" runat="server" Font-Names="Arial" Font-Size="Large" Text="Name :"></asp:Label>
-                        <br />
-                        <asp:TextBox ID="TextBox1" runat="server" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
+                    <td class="auto-style3">&nbsp;<br />
                     </td>
-                    <td class="auto-style4"></td>
-                    <td class="auto-style4"></td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">
-                        <asp:Label ID="Label3" runat="server" Font-Names="Arial" Font-Size="Large" Text="ID :"></asp:Label>
+                    <td class="auto-style6"><asp:Label ID="Label2" runat="server" Font-Names="Arial" Font-Size="X-Large" Text="Name :"></asp:Label>
                         <br />
-                        <asp:TextBox ID="TextBox2" runat="server" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
+                        <asp:TextBox ID="NameV" runat="server" OnTextChanged="TextBox1_TextChanged" Font-Size="X-Large"></asp:TextBox>
                     </td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style4">
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="NameV" ErrorMessage="This is a required field " Font-Names="Arial" Font-Size="Small" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <br />
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="NameV" ErrorMessage="Invalid Name Format" Font-Names="Arial" Font-Size="Small" ForeColor="Red" ValidationExpression="([A-Z][a-z]* \ s[A-Z][a-z]*)|([A-Z][a-z]*)"></asp:RegularExpressionValidator>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style2">
-                        <asp:Label ID="Label4" runat="server" Font-Names="Arial" Font-Size="Large" Text="Phone number :"></asp:Label>
                         <br />
-                        <asp:TextBox ID="TextBox3" runat="server" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
+                    </td>
+                    <td class="auto-style7">
+                        <asp:Label ID="Label3" runat="server" Font-Names="Arial" Font-Size="X-Large" Text="ID :"></asp:Label>
+                        <br />
+                        <asp:TextBox ID="IDV" runat="server" OnTextChanged="TextBox1_TextChanged" Font-Size="X-Large"></asp:TextBox>
+                        <br />
                     </td>
                     <td>
-                        <asp:Button ID="Button2" runat="server" Font-Names="Arial" Font-Size="Large" ForeColor="#3366FF" Text="Upload" />
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="IDV" ErrorMessage="This is a required field " Font-Names="Arial" Font-Size="Small" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <br />
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="IDV" ErrorMessage="Invalid ID Format" Font-Names="Arial" Font-Size="Small" ForeColor="Red" ValidationExpression="[0-9]+"></asp:RegularExpressionValidator>
                     </td>
-                    <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style2">
-                        <asp:Button ID="Button1" runat="server" Font-Names="Arial" Font-Size="Large" ForeColor="#FF6600" Text="Submit" />
+                        <br />
                     </td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style7">
+                        <asp:Label ID="Label4" runat="server" Font-Names="Arial" Font-Size="X-Large" Text="Email :"></asp:Label>
+                        <br />
+                        <asp:TextBox ID="txtE" runat="server" OnTextChanged="TextBox1_TextChanged" Font-Size="X-Large"></asp:TextBox>
+                    </td>
+                    <td>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtE" ErrorMessage="This is a required field " Font-Names="Arial" Font-Size="Small" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <br />
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="txtE" ErrorMessage="Invalid Email Address" Font-Names="Arial" Font-Size="Small" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style2">
+                        &nbsp;</td>
+                    <td class="auto-style7">
+                        <asp:Button ID="Button1" runat="server" Font-Names="Arial" Font-Size="X-Large" ForeColor="#FF6600" Text="Submit" />
+                    </td>
                     <td>&nbsp;</td>
                 </tr>
             </table>
-        </div>
     </form>
 </body>
 </html>

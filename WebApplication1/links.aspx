@@ -20,10 +20,10 @@
             <table class="auto-style1">
                 <tr>
                     <td class="auto-style2">
-                        <asp:HyperLink ID="HyperLink1" runat="server" Font-Names="Arial" NavigateUrl="~/signup.aspx">Sign up</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink1" runat="server" Font-Names="Arial" NavigateUrl="~/signup.aspx" BackColor="Red" ForeColor="White">Sign up</asp:HyperLink>
                     </td>
                     <td>
-                        <asp:HyperLink ID="HyperLink2" runat="server" Font-Names="Arial" NavigateUrl="~/SignIn.aspx">Sign in</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink2" runat="server" Font-Names="Arial" NavigateUrl="~/SignIn.aspx" BackColor="Red" ForeColor="White">Sign in</asp:HyperLink>
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>

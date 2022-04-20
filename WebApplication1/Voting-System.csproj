@@ -68,9 +68,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AddCan.aspx" />
-    <Content Include="App_Data\VotingSystem.mdf" />
-    <Content Include="App_Data\VotingSystem_log.ldf">
-      <DependentUpon>VotingSystem.mdf</DependentUpon>
+    <Content Include="App_Data\Voting.mdf" />
+    <Content Include="App_Data\Voting_log.ldf">
+      <DependentUpon>Voting.mdf</DependentUpon>
     </Content>
     <Content Include="CreateVoting.aspx" />
     <Content Include="Forget Password.aspx" />
