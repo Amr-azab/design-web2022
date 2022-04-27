@@ -10,16 +10,36 @@
         string strlnsert = String.Format("INSERT INTO Member VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')", txtFname.Text, txtLname.Text, rblSex.SelectedValue, txtEmail.Text, txtPhone.Text, ddlCountry.SelectedValue, txtUsername.Text, txtPassword.Text);
 
 
+
         SqlCommand cmdlnsert = new SqlCommand(strlnsert, conn);
 
-        conn.Open();
+        try
+        {
 
-        cmdlnsert.ExecuteNonQuery();
+            conn.Open();
 
-        conn.Close();
+            cmdlnsert.ExecuteNonQuery();
+
+            conn.Close();
 
 
-        lblMsg.Text = "Welcome " + txtFname.Text + "  Your Account has been successfully created";
+            lblMsg.Text = "Welcome " + txtFname.Text + "  Your Account has been successfully created";
+        }
+
+        catch (SqlException err)
+        {
+            if (err.Number == 2627)
+                lblMsg.Text = "The username" + txtUsername.Text + "already used , please choose another";
+            else
+                lblMsg.Text = "Sorry,database problem,please try later ";
+
+        }
+
+        catch
+        {
+            lblMsg.Text = "Sorry, the system is not available at the moment,you may try later";
+        }
+
     }
 </script>
 

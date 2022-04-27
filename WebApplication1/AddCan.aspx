@@ -1,6 +1,47 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddCan.aspx.cs" Inherits="Voting_System.AddCan" %>
-
+﻿<%@ Page Language="C#"%>
+<%@ import Namespace ="System.Data.SqlClient" %>
 <!DOCTYPE html>
+<script runat ="server">
+
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        SqlConnection conn = new SqlConnection();
+        conn.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|Voting.mdf;Integrated Security=True";
+        string strlnsert = String.Format("INSERT INTO Candidate VALUES('{0}','{1}','{2}')", NameV.Text,IDV.Text,txtE.Text);
+
+
+
+        SqlCommand cmdlnsert = new SqlCommand(strlnsert, conn);
+
+        try
+        {
+
+            conn.Open();
+
+            cmdlnsert.ExecuteNonQuery();
+
+            conn.Close();
+
+
+            lblMsg.Text = "Add " + NameV.Text + "  In The List";
+        }
+
+        catch (SqlException err)
+        {
+            if (err.Number == 2627)
+                lblMsg.Text = "The username" + NameV.Text + "already used , please choose another";
+            else
+                lblMsg.Text = "Sorry,database problem,please try later ";
+
+        }
+
+        catch
+        {
+            lblMsg.Text = "Sorry, the system is not available at the moment,you may try later";
+        }
+    }
+</script>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -31,6 +72,19 @@
             width: 568px;
             text-align: center;
         }
+        .auto-style8 {
+            text-align: center;
+            width: 297px;
+            height: 84px;
+        }
+        .auto-style9 {
+            width: 568px;
+            text-align: left;
+            height: 84px;
+        }
+        .auto-style10 {
+            height: 84px;
+        }
     </style>
 </head>
 <body>
@@ -51,7 +105,7 @@
                     </td>
                     <td class="auto-style6"><asp:Label ID="Label2" runat="server" Font-Names="Arial" Font-Size="X-Large" Text="Name :"></asp:Label>
                         <br />
-                        <asp:TextBox ID="NameV" runat="server" OnTextChanged="TextBox1_TextChanged" Font-Size="X-Large"></asp:TextBox>
+                        <asp:TextBox ID="NameV" runat="server" Font-Names="Arial" Font-Size="X-Large"></asp:TextBox>
                     </td>
                     <td class="auto-style4">
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="NameV" ErrorMessage="This is a required field " Font-Names="Arial" Font-Size="Small" ForeColor="Red"></asp:RequiredFieldValidator>
@@ -66,7 +120,7 @@
                     <td class="auto-style7">
                         <asp:Label ID="Label3" runat="server" Font-Names="Arial" Font-Size="X-Large" Text="ID :"></asp:Label>
                         <br />
-                        <asp:TextBox ID="IDV" runat="server" OnTextChanged="TextBox1_TextChanged" Font-Size="X-Large"></asp:TextBox>
+                        <asp:TextBox ID="IDV" runat="server" Font-Names="Arial" Font-Size="X-Large"></asp:TextBox>
                         <br />
                     </td>
                     <td>
@@ -82,7 +136,7 @@
                     <td class="auto-style7">
                         <asp:Label ID="Label4" runat="server" Font-Names="Arial" Font-Size="X-Large" Text="Email :"></asp:Label>
                         <br />
-                        <asp:TextBox ID="txtE" runat="server" OnTextChanged="TextBox1_TextChanged" Font-Size="X-Large"></asp:TextBox>
+                        <asp:TextBox ID="txtE" runat="server" Font-Names="Arial" Font-Size="X-Large"></asp:TextBox>
                     </td>
                     <td>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtE" ErrorMessage="This is a required field " Font-Names="Arial" Font-Size="Small" ForeColor="Red"></asp:RequiredFieldValidator>
@@ -94,9 +148,17 @@
                     <td class="auto-style2">
                         &nbsp;</td>
                     <td class="auto-style7">
-                        <asp:Button ID="Button1" runat="server" Font-Names="Arial" Font-Size="X-Large" ForeColor="#FF6600" Text="Submit" />
+                        <asp:Button ID="Button1" runat="server" Font-Names="Arial" Font-Size="X-Large" ForeColor="#FF6600" Text="Submit" OnClick="Button1_Click" />
                     </td>
                     <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style8">
+                        </td>
+                    <td class="auto-style9">
+                        <asp:Label ID="lblMsg" runat="server" Font-Bold="True" Font-Names="Arial" Font-Size="X-Large" ForeColor="#CC0000"></asp:Label>
+                    </td>
+                    <td class="auto-style10"></td>
                 </tr>
             </table>
     </form>

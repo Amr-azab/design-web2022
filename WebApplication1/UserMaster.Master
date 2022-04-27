@@ -1,0 +1,135 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UserMaster.master.cs" Inherits="Voting_System.UserMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            height: 137px;
+            width: 1028px;
+        }
+        .auto-style3 {
+            height: 365px;
+            width: 1028px;
+        }
+        .auto-style4 {
+            height: 26px;
+            width: 1028px;
+        }
+        .auto-style5 {
+            width: 310px;
+            height: 136px;
+        }
+        .auto-style6 {
+            width: 100%;
+            height: 120px;
+            margin-bottom: 10px;
+        }
+        .auto-style7 {
+            width: 194px;
+        }
+        .auto-style8 {
+            width: 230px;
+        }
+        .auto-style10 {
+            width: 1028px;
+        }
+        .auto-style11 {
+            height: 136px;
+        }
+        .auto-style12 {
+            width: 152px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table class="auto-style1">
+                <tr>
+                    <td class="auto-style2">
+                        <table class="auto-style6">
+                            <tr>
+                                <td class="auto-style5">
+                                    <asp:Image ID="Image1" runat="server" Height="122px" Width="287px" />
+                                </td>
+                                <td class="auto-style11">
+                                    <asp:Label ID="lblMsg" runat="server" Font-Bold="True" Font-Names="Arial" Font-Size="X-Large" ForeColor="#3333CC"></asp:Label>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style4">
+                        <table class="auto-style1">
+                            <tr>
+                                <td class="auto-style7">
+                                    <asp:HyperLink ID="HyperLink1" runat="server" Font-Names="Arial" Font-Size="Medium" ForeColor="#6600FF" NavigateUrl="~/UserHome.aspx">User Home</asp:HyperLink>
+                                </td>
+                                <td class="auto-style8">
+                                    <asp:HyperLink ID="HyperLink2" runat="server" Font-Names="Arial" Font-Size="Medium" ForeColor="#6600FF" NavigateUrl="~/myAccount.aspx">My Account</asp:HyperLink>
+                                </td>
+                                <td class="auto-style12">
+                                    <asp:HyperLink ID="HyperLink3" runat="server" Font-Names="Arial" Font-Size="Medium" ForeColor="#6600FF" NavigateUrl="~/voting.aspx">Voting</asp:HyperLink>
+                                </td>
+                                <td>
+                                    <asp:HyperLink ID="HyperLink4" runat="server" Font-Names="Arial" Font-Size="Medium" ForeColor="#6600FF" NavigateUrl="~/CreateV.aspx">CreateVote</asp:HyperLink>
+                                </td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style3" style="vertical-align: top">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style10">&nbsp;</td>
+                </tr>
+            </table>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+        </div>
+    </form>
+</body>
+</html>

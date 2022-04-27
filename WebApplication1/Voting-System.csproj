@@ -72,14 +72,18 @@
     <Content Include="App_Data\Voting_log.ldf">
       <DependentUpon>Voting.mdf</DependentUpon>
     </Content>
+    <Content Include="CreateV.aspx" />
     <Content Include="CreateVoting.aspx" />
     <Content Include="Forget Password.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="index.html" />
     <Content Include="links.aspx" />
+    <Content Include="myAccount.aspx" />
     <Content Include="Rename.aspx" />
     <Content Include="SignIn.aspx" />
     <Content Include="signup.aspx" />
+    <Content Include="UserHome.aspx" />
+    <Content Include="voting.aspx" />
     <Content Include="Web.config" />
     <Content Include="Welcome.html" />
   </ItemGroup>
@@ -90,6 +94,13 @@
     </Compile>
     <Compile Include="AddCan.aspx.designer.cs">
       <DependentUpon>AddCan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateV.aspx.cs">
+      <DependentUpon>CreateV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateV.aspx.designer.cs">
+      <DependentUpon>CreateV.aspx</DependentUpon>
     </Compile>
     <Compile Include="CreateVoting.aspx.cs">
       <DependentUpon>CreateVoting.aspx</DependentUpon>
@@ -119,6 +130,13 @@
     <Compile Include="links.aspx.designer.cs">
       <DependentUpon>links.aspx</DependentUpon>
     </Compile>
+    <Compile Include="myAccount.aspx.cs">
+      <DependentUpon>myAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="myAccount.aspx.designer.cs">
+      <DependentUpon>myAccount.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rename.aspx.cs">
       <DependentUpon>Rename.aspx</DependentUpon>
@@ -141,9 +159,31 @@
     <Compile Include="signup.aspx.designer.cs">
       <DependentUpon>signup.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UserHome.aspx.cs">
+      <DependentUpon>UserHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserHome.aspx.designer.cs">
+      <DependentUpon>UserHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserMaster.Master.cs">
+      <DependentUpon>UserMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserMaster.Master.designer.cs">
+      <DependentUpon>UserMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="voting.aspx.cs">
+      <DependentUpon>voting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="voting.aspx.designer.cs">
+      <DependentUpon>voting.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="UserMaster.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
