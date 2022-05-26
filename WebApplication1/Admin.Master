@@ -1,0 +1,113 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="Voting_System.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            height: 185px;
+            width: 1088px;
+        }
+        .auto-style3 {
+            height: 272px;
+            width: 1088px;
+        }
+        .auto-style5 {
+            height: 37px;
+            width: 1088px;
+        }
+        .auto-style6 {
+            height: 659px;
+        }
+        .auto-style7 {
+            height: 157px;
+        }
+        .auto-style8 {
+            height: 157px;
+            width: 335px;
+        }
+        .auto-style10 {
+            width: 236px;
+        }
+        .auto-style11 {
+            width: 229px;
+        }
+        .auto-style12 {
+            width: 284px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="auto-style6">
+            <table class="auto-style1">
+                <tr>
+                    <td class="auto-style2">
+                        <table class="auto-style1">
+                            <tr>
+                                <td class="auto-style8" style="vertical-align: top">
+                                    <asp:Image ID="imageAdmin" runat="server" Height="154px" Width="334px" />
+                                </td>
+                                <td class="auto-style7">
+                                    <asp:Label ID="lblMsg2" runat="server" Font-Bold="True" Font-Names="Arial" Font-Size="X-Large" ForeColor="#CC00FF"></asp:Label>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style5">
+                        <table class="auto-style1">
+                            <tr>
+                                <td class="auto-style11">
+                                    <asp:HyperLink ID="HyperLink1" runat="server" Font-Names="Arial" ForeColor="#9900CC" NavigateUrl="~/AdminHome.aspx">Admin Home</asp:HyperLink>
+                                </td>
+                                <td class="auto-style10">
+                                    <asp:HyperLink ID="HyperLink2" runat="server" Font-Names="Arial" ForeColor="#9900CC" NavigateUrl="~/AdminVoting.aspx">Admin Voting</asp:HyperLink>
+                                </td>
+                                <td class="auto-style12">
+                                    <asp:HyperLink ID="HyperLink3" runat="server" Font-Names="Arial" ForeColor="#9900CC" NavigateUrl="~/AdminCreateVote.aspx">Admin Create Vote</asp:HyperLink>
+                                </td>
+                                <td>
+                                    <asp:HyperLink ID="HyperLink4" runat="server" Font-Names="Arial" ForeColor="#9900CC" NavigateUrl="~/links.aspx">Sign Out</asp:HyperLink>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style3" style="vertical-align: top">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+        </div>
+    </form>
+</body>
+</html>

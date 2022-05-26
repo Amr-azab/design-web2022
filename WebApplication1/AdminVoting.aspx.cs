@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Voting_System
 {
-    public partial class voting : System.Web.UI.Page
+    public partial class AdminVoting : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

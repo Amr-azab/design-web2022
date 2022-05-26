@@ -16,7 +16,7 @@
         }
         .auto-style4 {
             text-align: center;
-            width: 776px;
+            width: 284px;
         }
         .auto-style5 {
             text-align: center;
@@ -26,7 +26,7 @@
         .auto-style6 {
             text-align: center;
             height: 153px;
-            width: 776px;
+            width: 284px;
         }
         .auto-style7 {
             height: 153px;
@@ -39,7 +39,7 @@
         .auto-style9 {
             text-align: center;
             height: 142px;
-            width: 776px;
+            width: 284px;
         }
         .auto-style10 {
             height: 142px;
@@ -52,7 +52,7 @@
         .auto-style12 {
             text-align: center;
             height: 118px;
-            width: 776px;
+            width: 284px;
         }
         .auto-style13 {
             height: 118px;

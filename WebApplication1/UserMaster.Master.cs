@@ -11,6 +11,12 @@ namespace Voting_System
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string Fname = "";
+            string Lname = "";
+            if (Request.Cookies["userinfo"]!=null)
+                Fname= Request.Cookies["userinfo"].Values["fn"];
+                Lname = Request.Cookies["userinfo"].Values["ln"];
+            lblMsg.Text = "Welcome " + Fname  + " " + Lname + " to voting system";
 
         }
     }

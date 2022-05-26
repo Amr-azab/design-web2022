@@ -11,7 +11,7 @@ namespace Voting_System
 {
 
 
-    public partial class voting
+    public partial class AdminHome
     {
 
         /// <summary>
